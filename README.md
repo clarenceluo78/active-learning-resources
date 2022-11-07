@@ -45,7 +45,7 @@ This is a collection of active learning survey:
 | [Active Learning on a Budget: Opposite Strategies Suit High and Low Budgets](https://arxiv.org/pdf/2202.02794v4.pdf) | TypiClust | ICML | 2022                 |  |
 
 
-## Code Resources
+## Code Resources and Setup
 - *General*
   - [**[List] Awesome Active Learning**](https://github.com/SupeRuier/awesome-active-learning) ![](https://img.shields.io/github/stars/SupeRuier/awesome-active-learning?style=social)
     - Previous works of active learning were categorized.
@@ -66,6 +66,26 @@ This is a collection of active learning survey:
   - [**[Code Collection] Active Learning Playground**](https://github.com/google/active-learning) **[⚠️Inactive]** ![](https://img.shields.io/github/stars/google/active-learning?style=social)
       - A python module for experimenting with different active learning algorithms.
 
+### Active Anomaly Detection
+Conda environment: Install [conda](https://docs.conda.io/en/latest/miniconda.html)
+```bash
+export PROJECT_DIR=<ABSOLUTE path to the repository root>
+# example: export PROJECT_DIR=/home/myusername/repositories/aad
+cd $PROJECT_DIR
+conda create -n aad python=3.8
+conda activate aad
+conda install pytorch==1.10.0 torchvision==0.11.1 -c pytorch -y
+conda install scikit-learn pandas
+pip install -r requirements.txt
+
+# if the following commands do not succeed, update conda
+conda env config vars set PYTHONPATH=${PYTHONPATH}:${PROJECT_DIR}
+conda env config vars set PROJECT_DIR=${PROJECT_DIR}
+conda env config vars set LD_LIBRARY_PATH=${CONDA_PREFIX}/lib:${LD_LIBRARY_PATH}
+conda env config vars set CUDA_HOME=${CONDA_PREFIX}
+conda env config vars set CUDA_ROOT=${CONDA_PREFIX}
+conda deactivate
+conda activate aad
 
 
 
