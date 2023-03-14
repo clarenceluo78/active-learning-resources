@@ -16,7 +16,7 @@ A curated list of repositories and papers of active learning in various fields (
 
 ## Papers
 - The paper list aims to provide an up-to-date active learning research direction for various fields.
----
+
 ### Survey
 This is a collection of active learning survey:
 | paper | abbr. | publication                | Year                 | Citations |
